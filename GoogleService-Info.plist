@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>727965534432-b2k7l9h22lb7oknq6pq2gd7lu2iktnpi.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.727965534432-b2k7l9h22lb7oknq6pq2gd7lu2iktnpi</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAqO6fl8wkDIffnNKuJJwuGYjHj6S3zUVw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>727965534432</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.fmi.Laskov.Meme</string>
+	<key>PROJECT_ID</key>
+	<string>meme-ed3fe</string>
+	<key>STORAGE_BUCKET</key>
+	<string>meme-ed3fe.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:727965534432:ios:cddf7c1fd82d8774dbe885</string>
+</dict>
+</plist>

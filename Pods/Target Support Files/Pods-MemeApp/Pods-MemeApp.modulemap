@@ -1,0 +1,6 @@
+module Pods_MemeApp {
+  umbrella header "Pods-MemeApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
