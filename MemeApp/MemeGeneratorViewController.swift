@@ -1,6 +1,6 @@
 //
 //  MemeGeneratorViewController.swift
-//  Meme
+//  MemeApp
 //
 //  Created by Nikola Laskov on 21.01.22.
 //

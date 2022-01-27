@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Meme
+//  MemeApp
 //
 //  Created by Nikola Laskov on 12.01.22.
 //
