@@ -9,6 +9,7 @@ import UIKit
 import Foundation
 import Kingfisher
 import NVActivityIndicatorView
+import FirebaseAuth
 
 class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
@@ -43,6 +44,16 @@ class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,
             }
         }
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if Auth.auth().currentUser == nil {
+            let loginVC = storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
+            loginVC.modalPresentationStyle = .fullScreen
+            present(loginVC, animated: false)
+        }
     }
     
     @IBAction func pressButton(_ sender: Any) {

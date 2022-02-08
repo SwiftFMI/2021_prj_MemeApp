@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import FirebaseStorage
+import FirebaseAuth
 
 
 final class StorageManager: NSObject {
@@ -104,7 +105,7 @@ final class StorageManager: NSObject {
                         guard let url = url else {
                             return
                         }
-                        if (url.absoluteString.range(of: FirebaseAuthManager.shared.currentUser!.uid) != nil){
+                        if (url.absoluteString.range(of: Auth.auth().currentUser!.uid) != nil){
                             self.memes.append(url.absoluteString)
                         }
                         count -= 1
@@ -118,7 +119,7 @@ final class StorageManager: NSObject {
     }
     
     func saveMemeInFirebase(memedImage: UIImage) {
-        let memeRef = memesRef.child("\(NSUUID().uuidString).\(FirebaseAuthManager.shared.currentUser?.uid ?? "").png")
+        let memeRef = memesRef.child("\(NSUUID().uuidString).\(Auth.auth().currentUser?.uid ?? "").png")
         
         let imageData = memedImage.pngData()
         let _ = memeRef.putData(imageData!, metadata: nil) { (metadata, error) in

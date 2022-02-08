@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 import NVActivityIndicatorView
 
 class LoginViewController: UIViewController,UITextFieldDelegate {
@@ -78,9 +79,9 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         activity.startAnimating()
         
         if segment.selectedSegmentIndex == 0 {
-            FirebaseAuthManager.shared.login(email: email.text, password: password.text, completion: { success, error in
+            FirebaseAuthManager.shared.login(email: email.text, password: password.text) { success, error in
                 if success{
-                    self.performSegue(withIdentifier: "toTabBar", sender: nil)
+                    self.dismiss(animated: true, completion: nil)
                 }
                 else {
                     self.Error.isHidden = false
@@ -89,13 +90,13 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 self.activity.stopAnimating();
                 self.activity.removeFromSuperview()
                 
-            })
+            }
         }
         else {
             
-            FirebaseAuthManager.shared.singUp(email: email.text, password: password.text, completion: { success, error in
-                if success{
-                    self.performSegue(withIdentifier: "toTabBar", sender: nil)
+            FirebaseAuthManager.shared.singUp(email: email.text, password: password.text) { success, error in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
                 }
                 else {
                     self.Error.isHidden = false
@@ -104,22 +105,35 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
                 self.activity.stopAnimating();
                 self.activity.removeFromSuperview()
                 
-            })
+            }
         }
     }
     
     func errorSetter(error: AuthError){
-        if error == .noEmail {
+        if error == .defaultError {
+           self.Error.text = "Something is wrong"
+           
+       } else if error == .noEmail {
             self.Error.text = "Email is required"
-        }
-        if error == .noPassword {
+            
+        } else if error == .noPassword {
             self.Error.text = "Password is required"
-        }
-        if error == .noUser {
+            
+        } else if error == .noUser {
             self.Error.text = "Email or password incorect"
-        }
-        if error == .noServer{
-            self.Error.text = "Server error"
+            
+        } else if error == .invalidEmail {
+            self.Error.text = "Invalid email"
+            
+        } else if error == .invalidEmail {
+            self.Error.text = "Invalid email"
+            
+        } else if error == .emailAlreadyInUse {
+            self.Error.text = "The email is already used"
+            
+        } else if error == .weakPassword {
+            self.Error.text = "Password should be at least 6 characters"
+            
         }
     }
     

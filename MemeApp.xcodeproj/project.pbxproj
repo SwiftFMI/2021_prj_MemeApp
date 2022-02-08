@@ -30,6 +30,7 @@
 		C15DBAA227A193A20060350F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15DBAA027A193A20060350F /* Main.storyboard */; };
 		C15DBAA427A193A40060350F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C15DBAA327A193A40060350F /* Assets.xcassets */; };
 		C15DBAA727A193A40060350F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C15DBAA527A193A40060350F /* LaunchScreen.storyboard */; };
+		C173D0A227B180B80039A1A3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C173D0A127B180B80039A1A3 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		C15DBAA327A193A40060350F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C15DBAA627A193A40060350F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C15DBAA827A193A40060350F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C173D0A127B180B80039A1A3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				C15DBAA527A193A40060350F /* LaunchScreen.storyboard */,
 				C15DBAA827A193A40060350F /* Info.plist */,
 				B0D429FA27A19A05003E4B79 /* GoogleService-Info.plist */,
+				C173D0A127B180B80039A1A3 /* ProfileViewController.swift */,
 			);
 			path = MemeApp;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				B0D429F627A19988003E4B79 /* MemeGeneratorViewController.swift in Sources */,
 				B041A0BC27A2EE93008FECC8 /* GalleryCollectionViewCell.swift in Sources */,
 				B041A0BD27A2EE93008FECC8 /* GalleryViewController.swift in Sources */,
+				C173D0A227B180B80039A1A3 /* ProfileViewController.swift in Sources */,
 				B0D429F827A19988003E4B79 /* User.swift in Sources */,
 				C15DBA9D27A193A20060350F /* SceneDelegate.swift in Sources */,
 			);
