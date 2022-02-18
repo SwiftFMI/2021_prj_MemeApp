@@ -23,7 +23,7 @@ final class StorageManager: NSObject {
     var templates: [String] = []
     var memes: [String] = []
     
-    var selecedTemplate:URL? = nil
+    var selecedImage:URL? = nil
     var uploadedTemplate:UIImage? = nil
     
     func getFromFirebaseTemplates(completion: @escaping () -> () ) {

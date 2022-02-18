@@ -63,7 +63,7 @@
                                             <constraint firstAttribute="width" constant="253" id="yDn-S1-4JQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -416,7 +416,7 @@
                     <connections>
                         <outlet property="collectionView" destination="YwA-nE-x9N" id="hrU-Ra-EoB"/>
                         <outlet property="segment" destination="UCG-l4-HWJ" id="NNc-18-y1p"/>
-                        <segue destination="qpm-ln-OKx" kind="show" id="NDY-n8-6FI"/>
+                        <segue destination="qpm-ln-OKx" kind="showDetail" identifier="toMemeZoom" id="NDY-n8-6FI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXm-mb-Egj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -448,7 +448,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dzk-WI-QAE"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="84q-vK-En7" firstAttribute="trailing" secondItem="Dzk-WI-QAE" secondAttribute="trailing" constant="-20" id="6F2-zN-EJA"/>
                             <constraint firstItem="84q-vK-En7" firstAttribute="top" secondItem="Dzk-WI-QAE" secondAttribute="top" id="XRA-sW-xjr"/>
@@ -461,65 +461,40 @@
             </objects>
             <point key="canvasLocation" x="2838" y="236"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme Zoom View Controller-->
         <scene sceneID="2FC-TM-efo">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" id="qpm-ln-OKx" customClass="ViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="qpm-ln-OKx" customClass="MemeZoomViewController" customModule="MemeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z9k-tt-eTW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KcH-K1-W5I">
-                                <rect key="frame" x="20" y="93.5" width="374" height="701"/>
+                                <rect key="frame" x="0.0" y="1" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="KcH-K1-W5I" secondAttribute="height" multiplier="187:351" id="fcd-ZF-wKg"/>
-                                    <constraint firstAttribute="height" constant="702" id="qOt-nI-QIc"/>
+                                    <constraint firstAttribute="width" secondItem="KcH-K1-W5I" secondAttribute="height" multiplier="187:351" constant="-35.119658119658084" id="fcd-ZF-wKg"/>
+                                    <constraint firstAttribute="height" constant="843" id="qOt-nI-QIc"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsU-61-X66">
-                                <rect key="frame" x="140" y="815" width="134" height="27"/>
-                                <color key="backgroundColor" red="0.60392156860000001" green="0.81960784310000001" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="FsU-61-X66" secondAttribute="height" multiplier="134:27" id="JGl-93-tce"/>
-                                    <constraint firstAttribute="width" constant="134" id="Rmh-mY-6Im"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Share">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption2"/>
-                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="Share:" destination="qpm-ln-OKx" eventType="touchUpInside" id="Kpy-9b-HiM"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fzy-6n-4K6"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KcH-K1-W5I" firstAttribute="top" secondItem="fzy-6n-4K6" secondAttribute="top" constant="5" id="Ewu-u2-2sl"/>
-                            <constraint firstItem="FsU-61-X66" firstAttribute="centerX" secondItem="KcH-K1-W5I" secondAttribute="centerX" id="KWD-gm-PSi"/>
-                            <constraint firstItem="FsU-61-X66" firstAttribute="top" secondItem="KcH-K1-W5I" secondAttribute="bottom" constant="20" id="ZAU-uX-FFO"/>
-                            <constraint firstItem="fzy-6n-4K6" firstAttribute="trailing" secondItem="KcH-K1-W5I" secondAttribute="trailing" constant="20" id="hEZ-PQ-Jtg"/>
-                            <constraint firstItem="KcH-K1-W5I" firstAttribute="leading" secondItem="fzy-6n-4K6" secondAttribute="leading" constant="20" id="iio-QI-MT8"/>
+                            <constraint firstItem="KcH-K1-W5I" firstAttribute="top" secondItem="fzy-6n-4K6" secondAttribute="top" constant="0.5" id="Ewu-u2-2sl"/>
+                            <constraint firstItem="fzy-6n-4K6" firstAttribute="trailing" secondItem="KcH-K1-W5I" secondAttribute="trailing" id="hEZ-PQ-Jtg"/>
+                            <constraint firstItem="KcH-K1-W5I" firstAttribute="leading" secondItem="fzy-6n-4K6" secondAttribute="leading" id="iio-QI-MT8"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Owl-FO-cKC"/>
                     <connections>
-                        <outlet property="NavBar" destination="Owl-FO-cKC" id="cGy-zH-M6l"/>
-                        <outlet property="button" destination="FsU-61-X66" id="ezD-12-4Ad"/>
-                        <outlet property="image" destination="KcH-K1-W5I" id="sV3-nD-9dS"/>
+                        <outlet property="imageView" destination="KcH-K1-W5I" id="CnP-qM-zqp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDG-4b-rK0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2029" y="1002"/>
+            <point key="canvasLocation" x="2028.985507246377" y="1001.7857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oGs-w4-NP9">
@@ -578,9 +553,6 @@
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

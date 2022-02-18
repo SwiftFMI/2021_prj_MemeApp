@@ -46,10 +46,14 @@ class GalleryViewController: UIViewController {
         
     }
     
+    //Change which memes to display (Your own or all memes)
     @IBAction func segmentChange(_ sender: Any) {
         if segment.selectedSegmentIndex == 0{
+            //Start animation
             view.addSubview(activity);
-            activity.startAnimating()
+            activity.startAnimating();
+            
+            //Reload collection view images
             StorageManager.shared.getFromFirebaseMemes {
                 self.collectionView.reloadData()
                 
@@ -60,8 +64,11 @@ class GalleryViewController: UIViewController {
             }
         }
         else{
+            //Start animation
             view.addSubview(activity);
-            activity.startAnimating()
+            activity.startAnimating();
+            
+            //Reload collection view images
             StorageManager.shared.getFromFirebaseMyMemes {
                 self.collectionView.reloadData()
                 
@@ -77,12 +84,13 @@ class GalleryViewController: UIViewController {
 
 extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
-    
+    //Get number of rows
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return StorageManager.shared.memes.count
     }
     
+    //Set cells with memes
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCollectionViewCell", for: indexPath) as! GalleryCollectionViewCell
@@ -95,10 +103,11 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
+    //Send selected meme to MemeZoomViewController
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             
         let stringURL = StorageManager.shared.memes[indexPath.row]
-        StorageManager.shared.selecedTemplate=URL(string: stringURL)
+        StorageManager.shared.selecedImage=URL(string: stringURL)
         
             performSegue(withIdentifier: "toMemeZoom", sender: nil)
         }

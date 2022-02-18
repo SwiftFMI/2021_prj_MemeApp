@@ -14,6 +14,7 @@
 		B041A0B927A2EE7B008FECC8 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041A0B727A2EE7B008FECC8 /* TemplateViewController.swift */; };
 		B041A0BC27A2EE93008FECC8 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041A0BA27A2EE93008FECC8 /* GalleryCollectionViewCell.swift */; };
 		B041A0BD27A2EE93008FECC8 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041A0BB27A2EE93008FECC8 /* GalleryViewController.swift */; };
+		B0658A7C27BF881F006E0920 /* MemeZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0658A7B27BF881F006E0920 /* MemeZoomViewController.swift */; };
 		B0D429F627A19988003E4B79 /* MemeGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D429EF27A19988003E4B79 /* MemeGeneratorViewController.swift */; };
 		B0D429F827A19988003E4B79 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D429F127A19988003E4B79 /* User.swift */; };
 		B0D429F927A19988003E4B79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D429F227A19988003E4B79 /* LoginViewController.swift */; };
@@ -43,6 +44,7 @@
 		B041A0B727A2EE7B008FECC8 /* TemplateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
 		B041A0BA27A2EE93008FECC8 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B041A0BB27A2EE93008FECC8 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		B0658A7B27BF881F006E0920 /* MemeZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeZoomViewController.swift; sourceTree = "<group>"; };
 		B0D429EF27A19988003E4B79 /* MemeGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeGeneratorViewController.swift; sourceTree = "<group>"; };
 		B0D429F127A19988003E4B79 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0D429F227A19988003E4B79 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				C15DBA9A27A193A20060350F /* AppDelegate.swift */,
 				C15DBA9E27A193A20060350F /* ViewController.swift */,
 				B0D429F127A19988003E4B79 /* User.swift */,
+				B0658A7B27BF881F006E0920 /* MemeZoomViewController.swift */,
 				C15DBA9C27A193A20060350F /* SceneDelegate.swift */,
 				B0D429F227A19988003E4B79 /* LoginViewController.swift */,
 				C15DBAA027A193A20060350F /* Main.storyboard */,
@@ -276,6 +279,7 @@
 				B041A0B827A2EE7B008FECC8 /* TemplateCollectionViewCell.swift in Sources */,
 				C15DBA9B27A193A20060350F /* AppDelegate.swift in Sources */,
 				B041A0B927A2EE7B008FECC8 /* TemplateViewController.swift in Sources */,
+				B0658A7C27BF881F006E0920 /* MemeZoomViewController.swift in Sources */,
 				B0D429F627A19988003E4B79 /* MemeGeneratorViewController.swift in Sources */,
 				B041A0BC27A2EE93008FECC8 /* GalleryCollectionViewCell.swift in Sources */,
 				B041A0BD27A2EE93008FECC8 /* GalleryViewController.swift in Sources */,
@@ -431,7 +435,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SRJFEVPZ2M;
+				DEVELOPMENT_TEAM = 2L24TQ8W95;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -460,7 +464,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SRJFEVPZ2M;
+				DEVELOPMENT_TEAM = 2L24TQ8W95;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

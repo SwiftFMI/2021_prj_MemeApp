@@ -23,7 +23,7 @@ class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,
         collectionView.dataSource=self;
         collectionView.delegate=self;
         
-        //Create and position lloading animation
+        //Create and position loading animation
         let activity=NVActivityIndicatorView(frame: .zero, type: .ballSpinFadeLoader, color: .gray, padding: nil)
         activity.frame.size = CGSize(width: 100, height: 100)
         activity.center = view.center
@@ -34,10 +34,12 @@ class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,
         
         //Get templates
         if StorageManager.shared.templates.isEmpty {
+            //Start loading animation
             activity.startAnimating();
             
             StorageManager.shared.getFromFirebaseTemplates {
                 self.collectionView.reloadData()
+                
                 //Stop loading animation after loading the templates
                 activity.stopAnimating()
                 activity.removeFromSuperview()
@@ -49,6 +51,7 @@ class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        //Check if there is logged user
         if Auth.auth().currentUser == nil {
             let loginVC = storyboard?.instantiateViewController(withIdentifier: "login") as! LoginViewController
             loginVC.modalPresentationStyle = .fullScreen
@@ -56,6 +59,7 @@ class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,
         }
     }
     
+    //Get image from library
     @IBAction func pressButton(_ sender: Any) {
         let vc = UIImagePickerController();
         vc.sourceType = .photoLibrary
@@ -64,7 +68,9 @@ class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,
         present(vc,animated: true)
     }
     
+    //Pick image from gallery and send it to MemeGeneratourViewController
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        //Get selected image
         if let image = info[UIImagePickerController.InfoKey(rawValue:"UIImagePickerControllerEditedImage")] as? UIImage{
             StorageManager.shared.uploadedTemplate = image
             
@@ -74,6 +80,8 @@ class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,
             dismiss(animated: true);
         }
     }
+    
+    //If Cancel button if pressed
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
@@ -81,20 +89,22 @@ class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,
 
 extension TemplatesViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
-    
+    //Get number of rows
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return StorageManager.shared.templates.count
     }
     
+    //Send selected template to MemeGeneratourViewController
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             
         let stringURL = StorageManager.shared.templates[indexPath.row]
-        StorageManager.shared.selecedTemplate=URL(string: stringURL)
+        StorageManager.shared.selecedImage=URL(string: stringURL)
         
             performSegue(withIdentifier: "toMemeGenerator", sender: nil)
         }
     
+    //Set cells with templates
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TemplateCollectionViewCell", for: indexPath) as! TemplateCollectionViewCell

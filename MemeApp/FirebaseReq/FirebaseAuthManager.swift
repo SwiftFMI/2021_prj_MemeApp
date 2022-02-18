@@ -13,16 +13,19 @@ final class FirebaseAuthManager: NSObject {
     static let shared = FirebaseAuthManager()
     
     func login(email: String?, password: String? , completion: @escaping (_ success: Bool, _ error: Error?) -> () ){
+        //Check for email
         guard let email = email, !email.isEmpty else {
             completion(false, AuthError.noEmail)
             return
         }
+        //Check for password
         guard let password = password, !password.isEmpty else {
             completion(false, AuthError.noPassword)
             return
         }
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
 
+            //If there is an error:
             if error != nil {
                 
                 switch (error! as NSError).code {
@@ -38,7 +41,7 @@ final class FirebaseAuthManager: NSObject {
                 return
             }
             
-//            UserDefaults.standard.set(user.user.uid, forKey: "UID")
+            //If there isn`t error
             completion(true, nil)
         }
     }
@@ -56,10 +59,12 @@ final class FirebaseAuthManager: NSObject {
     }
     
     func singUp(email: String?, password: String? , completion: @escaping (_ success: Bool, _ error: Error?) -> () ) {
+        //Check for email
         guard let email = email, !email.isEmpty else {
             completion(false, AuthError.noEmail)
             return
         }
+        //Check for password
         guard let password = password, !password.isEmpty else {
             completion(false, AuthError.noPassword)
             return
@@ -67,6 +72,7 @@ final class FirebaseAuthManager: NSObject {
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             
+            //If there is an error
             if error != nil {
                 
                 switch (error! as NSError).code {
@@ -84,6 +90,7 @@ final class FirebaseAuthManager: NSObject {
                 return
             }
             
+            //If there isn`t error
             completion(true, nil)
             
         }

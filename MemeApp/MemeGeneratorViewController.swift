@@ -16,16 +16,16 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var UpperText: UITextField!
     @IBOutlet var LowerText: UITextField!
     @IBOutlet var SaveButton: UIButton!
-    //@IBOutlet var FontSizeButton: UIButton!
+    @IBOutlet var FontSizeButton: UIButton!
     //@IBOutlet var FontSizes: UIMenu!
-    //@IBOutlet var FontStyleButton: UIMenu!
+    @IBOutlet var FontStyleButton: UIButton!
     //@IBOutlet var FontStyles: UIMenu!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let imageURL = StorageManager.shared.selecedTemplate {
+        if let imageURL = StorageManager.shared.selecedImage {
             image.kf.setImage(with: imageURL)
-            StorageManager.shared.selecedTemplate=nil
+            StorageManager.shared.selecedImage=nil
         }
         else {
             image.image=StorageManager.shared.uploadedTemplate
@@ -46,6 +46,7 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
         self.LowerText.delegate = self
     }
     
+    //Save the meme and return to TemplateViewController
     @IBAction func SaveButtonPress(_ sender: Any) {
         let memedImage = generateMemedImage()
         
@@ -57,7 +58,8 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
         
         //present(shareSheet,animated: true);
     }
-        
+    
+    //Generate the meme
     func generateMemedImage() -> UIImage {
             
         //Hide buttons
@@ -89,11 +91,13 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
         return memedImage
     }
     
+    //On tap to hide the keyboard
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             self.view.endEditing(true)
             return false
         }
 
+    //Screen to move with keyboard
     func subscribeToKeyboardNotifications() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)

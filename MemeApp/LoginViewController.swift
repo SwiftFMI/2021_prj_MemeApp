@@ -26,7 +26,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //On tap to hide the keyboard
+        //On tap hide the keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(textFieldShouldReturnOnTap))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
@@ -42,11 +42,13 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         
         
     }
-    
+    //On tap hide the keyboard
     @objc func textFieldShouldReturnOnTap(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
+    
+    
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
           
           if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
@@ -58,7 +60,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
           return false
        }
     
-    
+    //Change from login to gegistration
     @IBAction func segmentChange(_ sender: UISegmentedControl) {
         Error.isHidden = true
         email.text = ""
@@ -75,33 +77,42 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
     @IBAction func buttonPressed(_ sender: Any) {
         self.Error.isHidden = true
         
+        //Start loading animation
         view.addSubview(activity);
         activity.startAnimating()
         
+        //In case: login
         if segment.selectedSegmentIndex == 0 {
             FirebaseAuthManager.shared.login(email: email.text, password: password.text) { success, error in
                 if success{
+                    //If login successful return to TemplateViewController
                     self.dismiss(animated: true, completion: nil)
                 }
                 else {
+                    //If login isn`t successful show Error lable
                     self.Error.isHidden = false
                     self.errorSetter(error: error as! AuthError)
                 }
+                //Stop animation
                 self.activity.stopAnimating();
                 self.activity.removeFromSuperview()
                 
             }
         }
+        //In case: registration
         else {
             
             FirebaseAuthManager.shared.singUp(email: email.text, password: password.text) { success, error in
                 if success {
+                    //If registration successful return to TemplateViewController
                     self.dismiss(animated: true, completion: nil)
                 }
                 else {
+                    //If registration isn`t successful show Error lable
                     self.Error.isHidden = false
                     self.errorSetter(error: error as! AuthError)
                 }
+                //Stop animation
                 self.activity.stopAnimating();
                 self.activity.removeFromSuperview()
                 
@@ -109,6 +120,7 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         }
     }
     
+    //Set text for Error lable
     func errorSetter(error: AuthError){
         if error == .defaultError {
            self.Error.text = "Something is wrong"
