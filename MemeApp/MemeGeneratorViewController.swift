@@ -92,8 +92,8 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
         }
         
         let HELL = UIAction(title: "Helvetica") { [self] (action) in
-            UpperText.font = UIFont(name: "Helvetica", size: 26)
-            LowerText.font = UIFont(name: "Helvetica", size: 26)
+            UpperText.font = UIFont(name: "Helvetica Italic", size: 26)
+            LowerText.font = UIFont(name: "Helvetica Italic", size: 26)
         }
 
         let sizeMenu = UIMenu(options: .displayInline, children: [h1, h2, h3, h4, h5, h6])
@@ -114,9 +114,7 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
         
         _ = navigationController?.popViewController(animated: true)
         
-        //let shareSheet = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         
-        //present(shareSheet,animated: true);
     }
     
     //Generate the meme
@@ -125,10 +123,12 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
         //Hide buttons
         self.navigationController?.isNavigationBarHidden=true;
         SaveButton.isHidden=true;
-        if UpperText.text=="Text" {
+        sizeButton.isHidden=true;
+        styleButton.isHidden=true;
+        if UpperText.text=="Text" || UpperText.text==""{
             UpperText.isHidden=true
         }
-        if LowerText.text=="Text" {
+        if LowerText.text=="Text" || LowerText.text==""{
             LowerText.isHidden=true
         }
         let backColor=view.backgroundColor;
@@ -146,6 +146,8 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
         SaveButton.isHidden=false
         UpperText.isHidden=false
         LowerText.isHidden=false
+        sizeButton.isHidden=false;
+        styleButton.isHidden=false;
         view.backgroundColor=backColor
         
         return memedImage
@@ -170,7 +172,7 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
     
     @objc func keyboardWillChange(notification: Notification) {
         // move the screen if keyboard shown for bottom text field
-        if  UpperText.text == "Text" {
+        if  UpperText.text == "Text"{
             UpperText.text = ""
         }
         
@@ -193,48 +195,4 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
         
         
     }
-    
-    
-   /* @IBAction func changeFont(_ sender: Any) {
-        FontSizes.forEach{ (button) in
-            UIView.animate(withDuration: 0.3, animations: {
-                button.isHidden = !button.isHidden
-                self.view.layoutIfNeeded()
-            })
-        }
-    }
-    
-    enum Fonts: String {
-        case f1 = "F1"
-        case f2 = "F2"
-        case f3 = "F3"
-        case f4 = "F4"
-        case f5 = "F5"
-    }
-    
-    @IBAction func chooseFont(_ sender: UIButton) {
-        guard let title = sender.currentTitle, let font = Fonts(rawValue: title) else {
-            return
-        }
-        
-        switch font {
-        case .f1:
-            topTextField.font = UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)
-            bottomTextField.font = UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)
-        case .f2:
-            topTextField.font = UIFont(name: "Copperplate", size: 40)
-            bottomTextField.font = UIFont(name: "Copperplate", size: 40)
-        case .f3:
-            topTextField.font = UIFont(name: "GillSans-Italic", size: 40)
-            bottomTextField.font = UIFont(name: "GillSans-Italic", size: 40)
-        case .f4:
-            topTextField.font = UIFont(name: "MarkerFelt-Wide", size: 40)
-            bottomTextField.font = UIFont(name: "MarkerFelt-Wide", size: 40)
-        case .f5:
-            topTextField.font = UIFont(name: "TamilSangamMN-Bold", size: 40)
-            bottomTextField.font = UIFont(name: "TamilSangamMN-Bold", size: 40)
-        }
-    }*/
-    
-    
 }

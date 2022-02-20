@@ -221,7 +221,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="DXm-25-xPV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Text" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tlx-2z-h7S">
@@ -229,7 +229,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="rKL-Xp-Tsd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PC-wn-t0U">
@@ -360,27 +360,27 @@
                                 <rect key="frame" x="0.0" y="146" width="414" height="654"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Yg-xp-8SK">
-                                    <size key="itemSize" width="180" height="200"/>
+                                    <size key="itemSize" width="395" height="621"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="GalleryCollectionViewCell" id="hFs-9g-i8I" customClass="GalleryCollectionViewCell" customModule="MemeApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                        <rect key="frame" x="9.5" y="0.0" width="395" height="621"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7oF-8A-MUt">
-                                            <rect key="frame" x="0.0" y="0.0" width="180" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="395" height="621"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcQ-Yh-5yH">
-                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="220"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pcQ-Yh-5yH">
+                                                    <rect key="frame" x="0.0" y="0.0" width="395" height="619"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="180" height="200"/>
+                                        <size key="customSize" width="395" height="621"/>
                                         <connections>
                                             <outlet property="image" destination="pcQ-Yh-5yH" id="jTO-S7-Gcl"/>
                                         </connections>
@@ -424,7 +424,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXm-mb-Egj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2029" y="236"/>
+            <point key="canvasLocation" x="2028.985507246377" y="235.71428571428569"/>
         </scene>
         <!--profile-->
         <scene sceneID="owq-Pd-obq">
@@ -473,18 +473,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="KcH-K1-W5I">
-                                <rect key="frame" x="0.0" y="1" width="414" height="842"/>
+                                <rect key="frame" x="0.0" y="1" width="414" height="841"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="KcH-K1-W5I" secondAttribute="height" multiplier="187:351" constant="-35.119658119658084" id="fcd-ZF-wKg"/>
-                                    <constraint firstAttribute="height" constant="843" id="qOt-nI-QIc"/>
+                                    <constraint firstAttribute="width" secondItem="KcH-K1-W5I" secondAttribute="height" multiplier="187:351" constant="-34.586894586894573" id="fcd-ZF-wKg"/>
+                                    <constraint firstAttribute="height" constant="842" id="qOt-nI-QIc"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phh-le-Y9F">
+                                <rect key="frame" x="327" y="20" width="76" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="oyC-Ov-iyg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system"/>
+                                <connections>
+                                    <action selector="pressButton:" destination="qpm-ln-OKx" eventType="touchUpInside" id="dbP-1r-56a"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fzy-6n-4K6"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fzy-6n-4K6" firstAttribute="trailing" secondItem="Phh-le-Y9F" secondAttribute="trailing" constant="11" id="0Ym-wd-pPe"/>
+                            <constraint firstItem="Phh-le-Y9F" firstAttribute="top" secondItem="fzy-6n-4K6" secondAttribute="top" constant="20" id="7rT-Pt-XtS"/>
+                            <constraint firstItem="Phh-le-Y9F" firstAttribute="leading" secondItem="fzy-6n-4K6" secondAttribute="leading" constant="327" id="B1p-Om-Zp5"/>
                             <constraint firstItem="KcH-K1-W5I" firstAttribute="top" secondItem="fzy-6n-4K6" secondAttribute="top" constant="0.5" id="Ewu-u2-2sl"/>
                             <constraint firstItem="fzy-6n-4K6" firstAttribute="trailing" secondItem="KcH-K1-W5I" secondAttribute="trailing" id="hEZ-PQ-Jtg"/>
                             <constraint firstItem="KcH-K1-W5I" firstAttribute="leading" secondItem="fzy-6n-4K6" secondAttribute="leading" id="iio-QI-MT8"/>
@@ -493,6 +507,7 @@
                     <navigationItem key="navigationItem" id="Owl-FO-cKC"/>
                     <connections>
                         <outlet property="imageView" destination="KcH-K1-W5I" id="CnP-qM-zqp"/>
+                        <outlet property="shareButton" destination="Phh-le-Y9F" id="lvq-f8-jWE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDG-4b-rK0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -551,6 +566,7 @@
         <image name="folder" catalog="system" width="128" height="97"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -12,7 +12,9 @@ import Kingfisher
 
 class MemeZoomViewController: UIViewController {
 
+    @IBOutlet var shareButton: UIButton!
     @IBOutlet var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -30,7 +32,17 @@ class MemeZoomViewController: UIViewController {
         }
             //Make it zoomable
             addZoombehavior(for: imageView);
+        
+        
     }
+    
+    @IBAction func pressButton(_ sender: Any) {
+        let shareSheet = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
+            
+        present(shareSheet,animated: true);
+        
+    }
+    
 
 
 }
