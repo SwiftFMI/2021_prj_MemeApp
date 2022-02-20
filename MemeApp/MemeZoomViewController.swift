@@ -31,7 +31,7 @@ class MemeZoomViewController: UIViewController {
             
         }
             //Make it zoomable
-            addZoombehavior(for: imageView);
+            addZoombehavior(for: imageView, settings: .instaZoomSettings);
         
         
     }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B22265E8B3CC74B951E4232 /* libPods-MemeApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E3394BE7BF087A3D680984 /* libPods-MemeApp.a */; };
+		B02ECC9B27C2D8A700228DC3 /* MyGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02ECC9A27C2D8A700228DC3 /* MyGalleryViewController.swift */; };
 		B041A0B427A2EE65008FECC8 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041A0B227A2EE65008FECC8 /* FirebaseAuthManager.swift */; };
 		B041A0B527A2EE65008FECC8 /* FirebaseStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041A0B327A2EE65008FECC8 /* FirebaseStorageManager.swift */; };
 		B041A0B827A2EE7B008FECC8 /* TemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041A0B627A2EE7B008FECC8 /* TemplateCollectionViewCell.swift */; };
@@ -38,6 +39,7 @@
 		54E3394BE7BF087A3D680984 /* libPods-MemeApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MemeApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65BB3C6754AE363DDD4564FE /* Pods-MemeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeApp.release.xcconfig"; path = "Target Support Files/Pods-MemeApp/Pods-MemeApp.release.xcconfig"; sourceTree = "<group>"; };
 		6BD4534221D00230BC96FCA3 /* Pods-MemeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MemeApp.debug.xcconfig"; path = "Target Support Files/Pods-MemeApp/Pods-MemeApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B02ECC9A27C2D8A700228DC3 /* MyGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGalleryViewController.swift; sourceTree = "<group>"; };
 		B041A0B227A2EE65008FECC8 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		B041A0B327A2EE65008FECC8 /* FirebaseStorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseStorageManager.swift; sourceTree = "<group>"; };
 		B041A0B627A2EE7B008FECC8 /* TemplateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				B041A0BA27A2EE93008FECC8 /* GalleryCollectionViewCell.swift */,
 				B041A0BB27A2EE93008FECC8 /* GalleryViewController.swift */,
+				B02ECC9A27C2D8A700228DC3 /* MyGalleryViewController.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				B0D429F627A19988003E4B79 /* MemeGeneratorViewController.swift in Sources */,
 				B041A0BC27A2EE93008FECC8 /* GalleryCollectionViewCell.swift in Sources */,
 				B041A0BD27A2EE93008FECC8 /* GalleryViewController.swift in Sources */,
+				B02ECC9B27C2D8A700228DC3 /* MyGalleryViewController.swift in Sources */,
 				C173D0A227B180B80039A1A3 /* ProfileViewController.swift in Sources */,
 				B0D429F827A19988003E4B79 /* User.swift in Sources */,
 				C15DBA9D27A193A20060350F /* SceneDelegate.swift in Sources */,

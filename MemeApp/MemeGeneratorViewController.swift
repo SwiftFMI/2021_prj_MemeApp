@@ -134,12 +134,14 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
         let backColor=view.backgroundColor;
         view.backgroundColor=image.backgroundColor
         
+        
         //Get image
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
             
+        
         //Show buttons
             
         self.navigationController?.isNavigationBarHidden=false

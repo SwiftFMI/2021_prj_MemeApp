@@ -1,8 +1,8 @@
 //
-//  GalleryViewController.swift
+//  MyGalleryViewController.swift
 //  MemeApp
 //
-//  Created by Nikola Laskov on 21.01.22.
+//  Created by Nikola Laskov on 20.02.22.
 //
 
 import UIKit
@@ -10,7 +10,8 @@ import Foundation
 import NVActivityIndicatorView
 import Zoomy
 
-class GalleryViewController: UIViewController {
+class MyGalleryViewController: UIViewController {
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -34,7 +35,7 @@ class GalleryViewController: UIViewController {
         //Get templates
         if StorageManager.shared.memes.isEmpty {
             activity.startAnimating();
-            StorageManager.shared.getFromFirebaseMemes {
+            StorageManager.shared.getFromFirebaseMyMemes {
                 self.collectionView.reloadData()
                 
                 //Stop loading animation after loading the memes
@@ -48,7 +49,7 @@ class GalleryViewController: UIViewController {
     }
 }
 
-extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+extension MyGalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     //Get number of rows
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -78,4 +79,5 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
             performSegue(withIdentifier: "toMemeZoom", sender: nil)
     }
 }
+
 
