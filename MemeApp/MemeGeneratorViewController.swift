@@ -16,10 +16,10 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var UpperText: UITextField!
     @IBOutlet var LowerText: UITextField!
     @IBOutlet var SaveButton: UIButton!
-    @IBOutlet var FontSizeButton: UIButton!
-    //@IBOutlet var FontSizes: UIMenu!
-    @IBOutlet var FontStyleButton: UIButton!
-    //@IBOutlet var FontStyles: UIMenu!
+    
+    @IBOutlet var styleButton: UIButton!
+    @IBOutlet var sizeButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +44,66 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
         
         self.UpperText.delegate = self
         self.LowerText.delegate = self
+        
+        createMenus();
+        
+    }
+    
+    func createMenus(){
+        let h1 = UIAction(title: "h1") { [self] (action) in
+            //print("h1")
+            UpperText.font = UIFont(name: UpperText.font!.fontName, size: 30)
+            LowerText.font = UIFont(name: LowerText.font!.fontName, size: 30)
+        }
+        
+        let h2 = UIAction(title: "h2") { [self] (action) in
+            UpperText.font = UIFont(name: UpperText.font!.fontName, size: 28)
+            LowerText.font = UIFont(name: LowerText.font!.fontName, size: 28)
+        }
+        
+        let h3 = UIAction(title: "h3") { [self] (action) in
+            UpperText.font = UIFont(name: UpperText.font!.fontName, size: 26)
+            LowerText.font = UIFont(name: LowerText.font!.fontName, size: 26)
+        }
+        
+        let h4 = UIAction(title: "h4") { [self] (action) in
+            UpperText.font = UIFont(name: UpperText.font!.fontName, size: 24)
+            LowerText.font = UIFont(name: LowerText.font!.fontName, size: 24)
+        }
+        
+        let h5 = UIAction(title: "h5") { [self] (action) in
+            UpperText.font = UIFont(name: UpperText.font!.fontName, size: 22)
+            LowerText.font = UIFont(name: LowerText.font!.fontName, size: 22)
+        }
+        
+        let h6 = UIAction(title: "h6") { [self] (action) in
+            UpperText.font = UIFont(name: UpperText.font!.fontName, size: 20)
+            LowerText.font = UIFont(name: LowerText.font!.fontName, size: 20)
+        }
+        
+        let TNR = UIAction(title: "Times New Roman") { [self] (action) in
+            UpperText.font = UIFont(name: "Times New Roman", size: 26)
+            LowerText.font = UIFont(name: "Times New Roman", size: 26)
+        }
+        
+        let ARI = UIAction(title: "Ariel") { [self] (action) in
+            UpperText.font = UIFont(name: "Arial", size: 26)
+            LowerText.font = UIFont(name: "Arial", size: 26)
+        }
+        
+        let HELL = UIAction(title: "Helvetica") { [self] (action) in
+            UpperText.font = UIFont(name: "Helvetica", size: 26)
+            LowerText.font = UIFont(name: "Helvetica", size: 26)
+        }
+
+        let sizeMenu = UIMenu(options: .displayInline, children: [h1, h2, h3, h4, h5, h6])
+        let styleMenu = UIMenu(options: .displayInline, children: [TNR, ARI, HELL])
+        
+        styleButton.menu = styleMenu;
+        styleButton.showsMenuAsPrimaryAction = true;
+        
+        sizeButton.menu = sizeMenu;
+        sizeButton.showsMenuAsPrimaryAction = true;
     }
     
     //Save the meme and return to TemplateViewController

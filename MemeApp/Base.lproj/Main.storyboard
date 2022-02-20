@@ -105,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2838" y="-554"/>
+            <point key="canvasLocation" x="2837.68115942029" y="-554.46428571428567"/>
         </scene>
         <!--Templates-->
         <scene sceneID="fTH-fB-exK">
@@ -229,7 +229,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="rKL-Xp-Tsd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="26"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" alpha="0.69999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3PC-wn-t0U">
@@ -259,10 +259,10 @@
                                     <constraint firstAttribute="width" constant="65" id="mEI-f2-NeF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
-                                <menu key="menu" id="Ren-cW-Dzd">
+                                <menu key="menu" id="FjV-yh-0w3">
                                     <children>
-                                        <command title="Ariel" id="qNR-l8-RkN"/>
-                                        <command title="Times New Roman" id="kTm-QB-2js"/>
+                                        <command title="Item 1" id="L9t-fT-3jf"/>
+                                        <command title="Item 2" id="dgj-gw-0rC"/>
                                     </children>
                                 </menu>
                                 <state key="normal" title="Style">
@@ -281,13 +281,14 @@
                                     <constraint firstAttribute="width" constant="65" id="Qm7-5k-cNy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
-                                <menu key="menu" id="Fui-bh-mgT">
+                                <menu key="menu" id="PqY-E6-IRY">
                                     <children>
-                                        <command title="h1" id="1DK-0H-8Pl"/>
-                                        <command title="h2" id="mTn-XF-gUL"/>
-                                        <command title="h3" id="Dlg-7X-q8f"/>
-                                        <command title="h4" id="jpQ-K3-NyC"/>
-                                        <command title="h5" id="7HY-Aq-aXx"/>
+                                        <command title="Item 1" id="EaY-7D-16a"/>
+                                        <command title="Item 1" id="Tam-2Y-6ug"/>
+                                        <command title="Item 1" id="W8W-re-XBy"/>
+                                        <command title="Item 1" id="NON-Fz-usp"/>
+                                        <command title="Item 1" id="Mqw-CG-9Qe"/>
+                                        <command title="Item 2" id="Oga-ex-dAF"/>
                                     </children>
                                 </menu>
                                 <state key="normal" title="Size">
@@ -333,6 +334,8 @@
                         <outlet property="SaveButton" destination="3PC-wn-t0U" id="P8b-pj-9E9"/>
                         <outlet property="UpperText" destination="Tlx-2z-h7S" id="lxh-lS-n4u"/>
                         <outlet property="image" destination="IU4-Li-zbU" id="gfS-wp-oc1"/>
+                        <outlet property="sizeButton" destination="5cl-Rd-JeS" id="U7z-Ck-gjl"/>
+                        <outlet property="styleButton" destination="MjQ-r7-Hdh" id="7k0-59-NhL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cGB-Co-2SJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
