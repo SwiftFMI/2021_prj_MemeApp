@@ -67,6 +67,7 @@ class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,
         vc.delegate = self
         vc.allowsEditing = true
         present(vc,animated: true)
+        
     }
     
     //Pick image from gallery and send it to MemeGeneratourViewController

@@ -17,7 +17,6 @@
 		B041A0BD27A2EE93008FECC8 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B041A0BB27A2EE93008FECC8 /* GalleryViewController.swift */; };
 		B0658A7C27BF881F006E0920 /* MemeZoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0658A7B27BF881F006E0920 /* MemeZoomViewController.swift */; };
 		B0D429F627A19988003E4B79 /* MemeGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D429EF27A19988003E4B79 /* MemeGeneratorViewController.swift */; };
-		B0D429F827A19988003E4B79 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D429F127A19988003E4B79 /* User.swift */; };
 		B0D429F927A19988003E4B79 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D429F227A19988003E4B79 /* LoginViewController.swift */; };
 		B0D429FB27A19A05003E4B79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0D429FA27A19A05003E4B79 /* GoogleService-Info.plist */; };
 		B0D429FE27A19B07003E4B79 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B0D429FD27A19B07003E4B79 /* FirebaseAnalytics */; };
@@ -48,7 +47,6 @@
 		B041A0BB27A2EE93008FECC8 /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
 		B0658A7B27BF881F006E0920 /* MemeZoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeZoomViewController.swift; sourceTree = "<group>"; };
 		B0D429EF27A19988003E4B79 /* MemeGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeGeneratorViewController.swift; sourceTree = "<group>"; };
-		B0D429F127A19988003E4B79 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0D429F227A19988003E4B79 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B0D429FA27A19A05003E4B79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		C15DBA9727A193A20060350F /* MemeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +85,24 @@
 				65BB3C6754AE363DDD4564FE /* Pods-MemeApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B02ECC9C27C5A2AE00228DC3 /* MemeWork */ = {
+			isa = PBXGroup;
+			children = (
+				B0D429EF27A19988003E4B79 /* MemeGeneratorViewController.swift */,
+				B0658A7B27BF881F006E0920 /* MemeZoomViewController.swift */,
+			);
+			path = MemeWork;
+			sourceTree = "<group>";
+		};
+		B02ECC9D27C5A2E100228DC3 /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				B0D429F227A19988003E4B79 /* LoginViewController.swift */,
+				C173D0A127B180B80039A1A3 /* ProfileViewController.swift */,
+			);
+			path = Profiles;
 			sourceTree = "<group>";
 		};
 		B0D42A0927A19C56003E4B79 /* FirebaseReq */ = {
@@ -149,19 +165,16 @@
 				B0D42A0927A19C56003E4B79 /* FirebaseReq */,
 				B0D42A0E27A19CA7003E4B79 /* Templates */,
 				B0D42A0F27A19CB4003E4B79 /* Gallery */,
-				B0D429EF27A19988003E4B79 /* MemeGeneratorViewController.swift */,
-				B0658A7B27BF881F006E0920 /* MemeZoomViewController.swift */,
+				B02ECC9C27C5A2AE00228DC3 /* MemeWork */,
+				B02ECC9D27C5A2E100228DC3 /* Profiles */,
 				C15DBA9A27A193A20060350F /* AppDelegate.swift */,
-				C15DBA9E27A193A20060350F /* ViewController.swift */,
-				B0D429F127A19988003E4B79 /* User.swift */,
 				C15DBA9C27A193A20060350F /* SceneDelegate.swift */,
-				B0D429F227A19988003E4B79 /* LoginViewController.swift */,
+				C15DBA9E27A193A20060350F /* ViewController.swift */,
 				C15DBAA027A193A20060350F /* Main.storyboard */,
 				C15DBAA327A193A40060350F /* Assets.xcassets */,
 				C15DBAA527A193A40060350F /* LaunchScreen.storyboard */,
 				C15DBAA827A193A40060350F /* Info.plist */,
 				B0D429FA27A19A05003E4B79 /* GoogleService-Info.plist */,
-				C173D0A127B180B80039A1A3 /* ProfileViewController.swift */,
 			);
 			path = MemeApp;
 			sourceTree = "<group>";
@@ -288,7 +301,6 @@
 				B041A0BD27A2EE93008FECC8 /* GalleryViewController.swift in Sources */,
 				B02ECC9B27C2D8A700228DC3 /* MyGalleryViewController.swift in Sources */,
 				C173D0A227B180B80039A1A3 /* ProfileViewController.swift in Sources */,
-				B0D429F827A19988003E4B79 /* User.swift in Sources */,
 				C15DBA9D27A193A20060350F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
