@@ -174,9 +174,7 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
     
     @objc func keyboardWillChange(notification: Notification) {
         // move the screen if keyboard shown for bottom text field
-        if  UpperText.text == "Text"{
-            UpperText.text = ""
-        }
+        
         
         if LowerText.isFirstResponder {
             if LowerText.text == "Text" {
@@ -193,6 +191,9 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
             } else {
                 view.frame.origin.y = 0
             }
+        }
+        else if  UpperText.text == "Text"{
+            UpperText.text = ""
         }
         
         

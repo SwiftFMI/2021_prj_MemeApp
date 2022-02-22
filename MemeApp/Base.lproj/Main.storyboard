@@ -457,8 +457,22 @@
                                     <constraint firstAttribute="height" constant="842" id="qOt-nI-QIc"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qho-4V-cUK">
+                                <rect key="frame" x="20" y="20" width="76" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="76" id="11e-su-6qY"/>
+                                    <constraint firstAttribute="height" constant="60" id="JGY-bk-hgi"/>
+                                    <constraint firstAttribute="width" constant="76" id="YGp-QB-6Mg"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="gJo-7O-ghR"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="tray.and.arrow.down" catalog="system"/>
+                                <connections>
+                                    <action selector="safeButtonPressed:" destination="qpm-ln-OKx" eventType="touchUpInside" id="cs2-we-pGC"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phh-le-Y9F">
-                                <rect key="frame" x="327" y="20" width="76" height="60"/>
+                                <rect key="frame" x="318" y="20" width="76" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="oyC-Ov-iyg"/>
                                 </constraints>
@@ -472,17 +486,20 @@
                         <viewLayoutGuide key="safeArea" id="fzy-6n-4K6"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fzy-6n-4K6" firstAttribute="trailing" secondItem="Phh-le-Y9F" secondAttribute="trailing" constant="11" id="0Ym-wd-pPe"/>
+                            <constraint firstItem="fzy-6n-4K6" firstAttribute="trailing" secondItem="Phh-le-Y9F" secondAttribute="trailing" constant="20" id="0Ym-wd-pPe"/>
                             <constraint firstItem="Phh-le-Y9F" firstAttribute="top" secondItem="fzy-6n-4K6" secondAttribute="top" constant="20" id="7rT-Pt-XtS"/>
-                            <constraint firstItem="Phh-le-Y9F" firstAttribute="leading" secondItem="fzy-6n-4K6" secondAttribute="leading" constant="327" id="B1p-Om-Zp5"/>
+                            <constraint firstItem="Phh-le-Y9F" firstAttribute="leading" secondItem="fzy-6n-4K6" secondAttribute="leading" constant="318" id="B1p-Om-Zp5"/>
                             <constraint firstItem="KcH-K1-W5I" firstAttribute="top" secondItem="fzy-6n-4K6" secondAttribute="top" constant="0.5" id="Ewu-u2-2sl"/>
                             <constraint firstItem="fzy-6n-4K6" firstAttribute="trailing" secondItem="KcH-K1-W5I" secondAttribute="trailing" id="hEZ-PQ-Jtg"/>
+                            <constraint firstItem="qho-4V-cUK" firstAttribute="top" secondItem="fzy-6n-4K6" secondAttribute="top" constant="20" id="hFh-rY-8fT"/>
                             <constraint firstItem="KcH-K1-W5I" firstAttribute="leading" secondItem="fzy-6n-4K6" secondAttribute="leading" id="iio-QI-MT8"/>
+                            <constraint firstItem="qho-4V-cUK" firstAttribute="leading" secondItem="fzy-6n-4K6" secondAttribute="leading" constant="20" id="io7-Us-BrX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Owl-FO-cKC"/>
                     <connections>
                         <outlet property="imageView" destination="KcH-K1-W5I" id="CnP-qM-zqp"/>
+                        <outlet property="safeButton" destination="qho-4V-cUK" id="u7N-KA-gIq"/>
                         <outlet property="shareButton" destination="Phh-le-Y9F" id="lvq-f8-jWE"/>
                     </connections>
                 </viewController>
@@ -608,6 +625,7 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="tray.and.arrow.down" catalog="system" width="128" height="109"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -119,7 +119,18 @@ final class StorageManager: NSObject {
     }
     
     func saveMemeInFirebase(memedImage: UIImage) {
-        let memeRef = memesRef.child("\(NSUUID().uuidString).\(Auth.auth().currentUser?.uid ?? "").png")
+        
+        let date = Date()
+        let calendar = Calendar.current
+
+        let year = calendar.component(.year, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        let hour = calendar.component(.hour, from: date)
+        let minute = calendar.component(.minute, from: date)
+        let sec = calendar.component(.second, from: date)
+        
+        let memeRef = memesRef.child("\(year):\(month):\(day):\(hour):\(minute):\(sec).\(Auth.auth().currentUser?.uid ?? "").png")
         
         let imageData = memedImage.pngData()
         let _ = memeRef.putData(imageData!, metadata: nil) { (metadata, error) in
