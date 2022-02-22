@@ -110,9 +110,24 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
     @IBAction func SaveButtonPress(_ sender: Any) {
         let memedImage = generateMemedImage()
         
-        StorageManager.shared.saveMemeInFirebase(memedImage: memedImage)
+        StorageManager.shared.saveMemeInFirebase(memedImage: memedImage){ (success, error) in
+            
+            if !success{
+                let ac = UIAlertController(title: "Save error", message: error?.localizedDescription, preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default,handler: {_ in
+                    _ = self.navigationController?.popViewController(animated: true)
+                }))
+                self.present(ac, animated: true)
+            } else {
+                let ac = UIAlertController(title: "Saved!", message: "Your meme has been saved!.", preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default,handler: {_ in
+                    _ = self.navigationController?.popViewController(animated: true)
+                }))
+                self.present(ac, animated: true)
+            }
+        }
         
-        _ = navigationController?.popViewController(animated: true)
+        
         
         
     }

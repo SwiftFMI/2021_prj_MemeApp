@@ -118,7 +118,7 @@ final class StorageManager: NSObject {
         }
     }
     
-    func saveMemeInFirebase(memedImage: UIImage) {
+    func saveMemeInFirebase(memedImage: UIImage, completion: @escaping (_ success: Bool, _ error: Error?) -> ()) {
         
         let date = Date()
         let calendar = Calendar.current
@@ -135,9 +135,12 @@ final class StorageManager: NSObject {
         let imageData = memedImage.pngData()
         let _ = memeRef.putData(imageData!, metadata: nil) { (metadata, error) in
             guard metadata != nil else {
-            print(error as Any)
+                completion(false, error)
                 return
-            }}
+            }
+                completion(true, nil)
+            
+        }
     }
     
 }

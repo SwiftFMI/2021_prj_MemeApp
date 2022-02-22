@@ -474,6 +474,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phh-le-Y9F">
                                 <rect key="frame" x="318" y="20" width="76" height="60"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="VNX-o5-aAc"/>
                                     <constraint firstAttribute="height" constant="60" id="oyC-Ov-iyg"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -488,7 +489,6 @@
                         <constraints>
                             <constraint firstItem="fzy-6n-4K6" firstAttribute="trailing" secondItem="Phh-le-Y9F" secondAttribute="trailing" constant="20" id="0Ym-wd-pPe"/>
                             <constraint firstItem="Phh-le-Y9F" firstAttribute="top" secondItem="fzy-6n-4K6" secondAttribute="top" constant="20" id="7rT-Pt-XtS"/>
-                            <constraint firstItem="Phh-le-Y9F" firstAttribute="leading" secondItem="fzy-6n-4K6" secondAttribute="leading" constant="318" id="B1p-Om-Zp5"/>
                             <constraint firstItem="KcH-K1-W5I" firstAttribute="top" secondItem="fzy-6n-4K6" secondAttribute="top" constant="0.5" id="Ewu-u2-2sl"/>
                             <constraint firstItem="fzy-6n-4K6" firstAttribute="trailing" secondItem="KcH-K1-W5I" secondAttribute="trailing" id="hEZ-PQ-Jtg"/>
                             <constraint firstItem="qho-4V-cUK" firstAttribute="top" secondItem="fzy-6n-4K6" secondAttribute="top" constant="20" id="hFh-rY-8fT"/>

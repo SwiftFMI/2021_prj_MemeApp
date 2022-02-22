@@ -61,6 +61,7 @@ class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,
     
     //Get image from library
     @IBAction func pressButton(_ sender: Any) {
+
         let vc = UIImagePickerController();
         vc.sourceType = .photoLibrary
         vc.delegate = self
