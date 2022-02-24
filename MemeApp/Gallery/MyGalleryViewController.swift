@@ -31,21 +31,20 @@ class MyGalleryViewController: UIViewController {
         //Start loading animation
         view.addSubview(activity);
         
-        
-        //Get templates
-        if StorageManager.shared.memes.isEmpty {
-            activity.startAnimating();
-            StorageManager.shared.getFromFirebaseMyMemes {
-                self.collectionView.reloadData()
-                
-                //Stop loading animation after loading the memes
-                self.activity.stopAnimating()
-                self.activity.removeFromSuperview()
-                
-            }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //Get my Memes
+        super.viewDidAppear(animated)
+        activity.startAnimating();
+        StorageManager.shared.getFromFirebaseMyMemes {
+            self.collectionView.reloadData()
+            
+            //Stop loading animation after loading the memes
+            self.activity.stopAnimating()
+            self.activity.removeFromSuperview()
+            
         }
-        
-        
     }
 }
 
@@ -54,7 +53,7 @@ extension MyGalleryViewController: UICollectionViewDelegate, UICollectionViewDat
     //Get number of rows
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return StorageManager.shared.memes.count
+        return StorageManager.shared.myMemes.count
     }
     
     //Set cells with memes
@@ -62,7 +61,7 @@ extension MyGalleryViewController: UICollectionViewDelegate, UICollectionViewDat
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCollectionViewCell", for: indexPath) as! GalleryCollectionViewCell
         
-        let url = URL(string: StorageManager.shared.memes[indexPath.row] )
+        let url = URL(string: StorageManager.shared.myMemes[indexPath.row] )
         
         cell.image.kf.setImage(with: url)
         addZoombehavior(for: cell.image, settings: .instaZoomSettings)
@@ -73,7 +72,7 @@ extension MyGalleryViewController: UICollectionViewDelegate, UICollectionViewDat
     //Send selected meme to MemeZoomViewController
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             
-        let stringURL = StorageManager.shared.memes[indexPath.row]
+        let stringURL = StorageManager.shared.myMemes[indexPath.row]
         StorageManager.shared.selecedImage=URL(string: stringURL)
         
             performSegue(withIdentifier: "toMemeZoom", sender: nil)

@@ -31,17 +31,22 @@ class GalleryViewController: UIViewController {
         view.addSubview(activity);
         
         
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         //Get templates
-        if StorageManager.shared.memes.isEmpty {
-            activity.startAnimating();
-            StorageManager.shared.getFromFirebaseMemes {
-                self.collectionView.reloadData()
+        activity.startAnimating();
+        StorageManager.shared.getFromFirebaseMemes {
+            self.collectionView.reloadData()
                 
-                //Stop loading animation after loading the memes
-                self.activity.stopAnimating()
-                self.activity.removeFromSuperview()
-                
-            }
+            //Stop loading animation after loading the memes
+            self.activity.stopAnimating()
+            self.activity.removeFromSuperview()
+            
         }
         
         

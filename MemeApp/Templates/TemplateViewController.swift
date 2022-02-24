@@ -57,6 +57,8 @@ class TemplatesViewController: UIViewController,UIImagePickerControllerDelegate,
             loginVC.modalPresentationStyle = .fullScreen
             present(loginVC, animated: false)
         }
+        
+        
     }
     
     //Get image from library

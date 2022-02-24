@@ -22,6 +22,7 @@ final class StorageManager: NSObject {
     
     var templates: [String] = []
     var memes: [String] = []
+    var myMemes: [String] = []
     
     var selecedImage:URL? = nil
     var uploadedTemplate:UIImage? = nil
@@ -88,7 +89,7 @@ final class StorageManager: NSObject {
     }
     
     func getFromFirebaseMyMemes(completion: @escaping () -> () ) {
-        memes.removeAll()
+        myMemes.removeAll()
         memesRef.listAll { (result, error) in
             
             if let error = error {
@@ -106,7 +107,7 @@ final class StorageManager: NSObject {
                             return
                         }
                         if (url.absoluteString.range(of: Auth.auth().currentUser!.uid) != nil){
-                            self.memes.append(url.absoluteString)
+                            self.myMemes.append(url.absoluteString)
                         }
                         count -= 1
                         if count == 0 {

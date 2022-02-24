@@ -121,6 +121,9 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
             } else {
                 let ac = UIAlertController(title: "Saved!", message: "Your meme has been saved!.", preferredStyle: .alert)
                 ac.addAction(UIAlertAction(title: "OK", style: .default,handler: {_ in
+                    
+                    //StorageManager.shared.memes.removeAll();
+                    
                     _ = self.navigationController?.popViewController(animated: true)
                 }))
                 self.present(ac, animated: true)
