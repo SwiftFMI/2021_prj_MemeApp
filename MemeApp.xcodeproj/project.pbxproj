@@ -25,6 +25,8 @@
 		B0D42A0427A19B07003E4B79 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B0D42A0327A19B07003E4B79 /* FirebaseDatabase */; };
 		B0D42A0627A19B07003E4B79 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B0D42A0527A19B07003E4B79 /* FirebaseFirestore */; };
 		B0D42A0827A19B07003E4B79 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B0D42A0727A19B07003E4B79 /* FirebaseStorage */; };
+		C12F043D27C7CEC70084EF1A /* ChangeEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12F043C27C7CEC70084EF1A /* ChangeEmailViewController.swift */; };
+		C12F043F27C7D8100084EF1A /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12F043E27C7D8100084EF1A /* ChangePasswordViewController.swift */; };
 		C15DBA9B27A193A20060350F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15DBA9A27A193A20060350F /* AppDelegate.swift */; };
 		C15DBA9D27A193A20060350F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15DBA9C27A193A20060350F /* SceneDelegate.swift */; };
 		C15DBA9F27A193A20060350F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15DBA9E27A193A20060350F /* ViewController.swift */; };
@@ -49,6 +51,8 @@
 		B0D429EF27A19988003E4B79 /* MemeGeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeGeneratorViewController.swift; sourceTree = "<group>"; };
 		B0D429F227A19988003E4B79 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B0D429FA27A19A05003E4B79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C12F043C27C7CEC70084EF1A /* ChangeEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeEmailViewController.swift; sourceTree = "<group>"; };
+		C12F043E27C7D8100084EF1A /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		C15DBA9727A193A20060350F /* MemeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C15DBA9A27A193A20060350F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C15DBA9C27A193A20060350F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +105,8 @@
 			children = (
 				B0D429F227A19988003E4B79 /* LoginViewController.swift */,
 				C173D0A127B180B80039A1A3 /* ProfileViewController.swift */,
+				C12F043C27C7CEC70084EF1A /* ChangeEmailViewController.swift */,
+				C12F043E27C7D8100084EF1A /* ChangePasswordViewController.swift */,
 			);
 			path = Profiles;
 			sourceTree = "<group>";
@@ -293,9 +299,11 @@
 				B041A0B427A2EE65008FECC8 /* FirebaseAuthManager.swift in Sources */,
 				C15DBA9F27A193A20060350F /* ViewController.swift in Sources */,
 				B041A0B827A2EE7B008FECC8 /* TemplateCollectionViewCell.swift in Sources */,
+				C12F043D27C7CEC70084EF1A /* ChangeEmailViewController.swift in Sources */,
 				C15DBA9B27A193A20060350F /* AppDelegate.swift in Sources */,
 				B041A0B927A2EE7B008FECC8 /* TemplateViewController.swift in Sources */,
 				B0658A7C27BF881F006E0920 /* MemeZoomViewController.swift in Sources */,
+				C12F043F27C7D8100084EF1A /* ChangePasswordViewController.swift in Sources */,
 				B0D429F627A19988003E4B79 /* MemeGeneratorViewController.swift in Sources */,
 				B041A0BC27A2EE93008FECC8 /* GalleryCollectionViewCell.swift in Sources */,
 				B041A0BD27A2EE93008FECC8 /* GalleryViewController.swift in Sources */,
@@ -451,7 +459,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2L24TQ8W95;
+				DEVELOPMENT_TEAM = SRJFEVPZ2M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -480,7 +488,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2L24TQ8W95;
+				DEVELOPMENT_TEAM = SRJFEVPZ2M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemeApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

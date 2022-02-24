@@ -137,9 +137,6 @@ class LoginViewController: UIViewController,UITextFieldDelegate {
         } else if error == .invalidEmail {
             self.Error.text = "Invalid email"
             
-        } else if error == .invalidEmail {
-            self.Error.text = "Invalid email"
-            
         } else if error == .emailAlreadyInUse {
             self.Error.text = "The email is already used"
             
