@@ -21,6 +21,8 @@ class ProfileViewController: UIViewController {
             FirebaseAuthManager.shared.logout { success in
                 if (success) {
                     self.goToLogoutScene()
+                    StorageManager.shared.memes.removeAll()
+                    StorageManager.shared.myMemes.removeAll()
                 }
             }
         }))

@@ -95,9 +95,22 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
             UpperText.font = UIFont(name: "Helvetica Italic", size: 26)
             LowerText.font = UIFont(name: "Helvetica Italic", size: 26)
         }
+        
+        let ARI_IT = UIAction(title: "Arial Italic") { [self] (action) in
+            UpperText.font = UIFont(name: "Arial Italic", size: 26)
+            LowerText.font = UIFont(name: "Arial Italic", size: 26)
+        }
+        
+        let AVE = UIAction(title: "Avenir Next") { [self] (action) in
+            UpperText.font = UIFont(name: "Avenir Next Bold Italic", size: 26)
+            LowerText.font = UIFont(name: "Avenir Next Bold Italic", size: 26)
+        }
+        
+        
+        
 
         let sizeMenu = UIMenu(options: .displayInline, children: [h1, h2, h3, h4, h5, h6])
-        let styleMenu = UIMenu(options: .displayInline, children: [TNR, ARI, HELL])
+        let styleMenu = UIMenu(options: .displayInline, children: [TNR, ARI, HELL, ARI_IT, AVE])
         
         styleButton.menu = styleMenu;
         styleButton.showsMenuAsPrimaryAction = true;
@@ -177,7 +190,7 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             self.view.endEditing(true)
             return false
-        }
+    }
 
     //Screen to move with keyboard
     func subscribeToKeyboardNotifications() {
@@ -204,8 +217,8 @@ class MemeGeneratorViewController: UIViewController, UITextFieldDelegate{
                 return
             }
             
-            if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification {
-                view.frame.origin.y = 0-keyboardRect.height
+            if notification.name == UIResponder.keyboardWillShowNotification || notification.name == UIResponder.keyboardWillChangeFrameNotification  {
+                view.frame.origin.y -= keyboardRect.height
             } else {
                 view.frame.origin.y = 0
             }

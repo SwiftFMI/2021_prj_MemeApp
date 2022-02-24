@@ -16,7 +16,7 @@ class MyGalleryViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let activity=NVActivityIndicatorView(frame: .zero, type: .ballSpinFadeLoader, color: .gray, padding: nil)
-    
+    var firstLoad = true
     
     
     override func viewDidLoad() {
@@ -28,23 +28,37 @@ class MyGalleryViewController: UIViewController {
         activity.frame.size = CGSize(width: 100, height: 100)
         activity.center = view.center
         
-        //Start loading animation
-        view.addSubview(activity);
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //Get my Memes
         super.viewDidAppear(animated)
-        activity.startAnimating();
-        StorageManager.shared.getFromFirebaseMyMemes {
-            self.collectionView.reloadData()
+        
+        if(StorageManager.shared.myMemes.isEmpty) {firstLoad = true}
+        
+        if firstLoad{
+            //Start loading animation
+            view.addSubview(activity);
             
-            //Stop loading animation after loading the memes
-            self.activity.stopAnimating()
-            self.activity.removeFromSuperview()
+            //Get my Memes
             
+            activity.startAnimating();
+            StorageManager.shared.getFromFirebaseMyMemes {
+                self.collectionView.reloadData()
+                
+                //Stop loading animation after loading the memes
+                self.activity.stopAnimating()
+                self.activity.removeFromSuperview()
+                
+            }
+            
+            firstLoad = false
+        }else{
+            StorageManager.shared.getFromFirebaseMyMemes {
+                self.collectionView.reloadData()
+            }
         }
+        
     }
 }
 

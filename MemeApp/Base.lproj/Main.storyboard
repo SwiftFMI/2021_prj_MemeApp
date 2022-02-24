@@ -271,6 +271,7 @@
                                 <color key="backgroundColor" red="0.65098041299999998" green="0.81176471709999998" blue="0.82745099070000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="1SM-i3-Qfs"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="zoB-9X-Bw5"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save">
@@ -290,6 +291,7 @@
                                 <rect key="frame" x="43" y="747" width="65" height="32"/>
                                 <color key="backgroundColor" red="0.73725497719999999" green="0.85490196939999996" blue="0.87058818339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="8pz-c5-BwE"/>
                                     <constraint firstAttribute="width" constant="65" id="mEI-f2-NeF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
@@ -313,6 +315,7 @@
                                 <color key="backgroundColor" red="0.74117654560000001" green="0.85490196939999996" blue="0.87058818339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="Qm7-5k-cNy"/>
+                                    <constraint firstAttribute="height" constant="32" id="g8P-Iy-cmO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                 <menu key="menu" id="PqY-E6-IRY">
@@ -345,18 +348,16 @@
                             <constraint firstItem="opt-eW-OSs" firstAttribute="trailing" secondItem="5cl-Rd-JeS" secondAttribute="trailing" constant="43" id="CwW-e0-oFR"/>
                             <constraint firstItem="IU4-Li-zbU" firstAttribute="leading" secondItem="opt-eW-OSs" secondAttribute="leading" id="Ha2-UZ-QCc"/>
                             <constraint firstItem="3PC-wn-t0U" firstAttribute="leading" secondItem="MjQ-r7-Hdh" secondAttribute="trailing" constant="17" id="J3X-lU-cVn"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="3PC-wn-t0U" secondAttribute="bottom" constant="34" id="KvH-QF-gxp"/>
                             <constraint firstItem="3PC-wn-t0U" firstAttribute="top" secondItem="1vR-zw-vuf" secondAttribute="bottom" constant="31" id="M6j-Xf-22Z"/>
                             <constraint firstItem="Tlx-2z-h7S" firstAttribute="leading" secondItem="opt-eW-OSs" secondAttribute="leading" constant="43" id="O3J-UV-0oB"/>
                             <constraint firstItem="opt-eW-OSs" firstAttribute="trailing" secondItem="1vR-zw-vuf" secondAttribute="trailing" constant="43" id="O9T-sc-o8U"/>
                             <constraint firstItem="opt-eW-OSs" firstAttribute="trailing" secondItem="Tlx-2z-h7S" secondAttribute="trailing" constant="43" id="Ogn-n4-Xqp"/>
-                            <constraint firstItem="3PC-wn-t0U" firstAttribute="bottom" secondItem="opt-eW-OSs" secondAttribute="bottom" constant="-34" id="P49-hj-T5a"/>
                             <constraint firstItem="IU4-Li-zbU" firstAttribute="trailing" secondItem="opt-eW-OSs" secondAttribute="trailing" id="WPw-o9-zUf"/>
                             <constraint firstItem="IU4-Li-zbU" firstAttribute="top" secondItem="PgM-oo-4Nh" secondAttribute="top" constant="0.5" id="m23-4E-rne"/>
                             <constraint firstAttribute="bottom" secondItem="IU4-Li-zbU" secondAttribute="bottom" constant="0.5" id="oxp-dh-Qfc"/>
-                            <constraint firstItem="5cl-Rd-JeS" firstAttribute="bottom" secondItem="opt-eW-OSs" secondAttribute="bottom" constant="-34" id="rSv-r5-bLp"/>
                             <constraint firstItem="3PC-wn-t0U" firstAttribute="leading" secondItem="MjQ-r7-Hdh" secondAttribute="trailing" constant="17" id="slT-4m-NGe"/>
                             <constraint firstItem="MjQ-r7-Hdh" firstAttribute="top" secondItem="1vR-zw-vuf" secondAttribute="bottom" constant="31" id="u5T-O8-qS0"/>
-                            <constraint firstItem="MjQ-r7-Hdh" firstAttribute="bottom" secondItem="opt-eW-OSs" secondAttribute="bottom" constant="-34" id="uaW-3T-5rG"/>
                             <constraint firstItem="5cl-Rd-JeS" firstAttribute="top" secondItem="1vR-zw-vuf" secondAttribute="bottom" constant="31" id="vpW-ey-H2a"/>
                             <constraint firstItem="MjQ-r7-Hdh" firstAttribute="leading" secondItem="opt-eW-OSs" secondAttribute="leading" constant="43" id="xdO-rA-PMa"/>
                             <constraint firstItem="Tlx-2z-h7S" firstAttribute="top" secondItem="opt-eW-OSs" secondAttribute="top" constant="61" id="y33-GS-AoE"/>
